@@ -12,7 +12,7 @@ port = 8000
 #########
 # Handle the response here 
 def block_request(self):
-    print("Blocking request")
+    self.send_error(403, "Request blocked due to firewall")
 
 
 def handle_request(self):
